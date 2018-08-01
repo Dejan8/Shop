@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="793.0" prefWidth="1079.0" style="-fx-background-color: #399fc0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="miracle.FXMLHomePageController">
+   <children>
+      <AnchorPane layoutX="337.0" prefHeight="805.0" prefWidth="742.0" style="-fx-background-color: white;">
+         <children>
+            <Text fx:id="listView" layoutX="92.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Listview" visible="false" />
+            <Text fx:id="addPerson" fill="#25b4cd" layoutX="174.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New  Article" visible="false">
+               <font>
+                  <Font size="46.0" />
+               </font></Text>
+            <TableView fx:id="tView" editable="true" fixedCellSize="0.0" layoutX="5.0" layoutY="72.0" prefHeight="621.0" prefWidth="734.0" style="-fx-background-color: white;" visible="false">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="42.0" text="Id" />
+                <TableColumn fx:id="flowRate" prefWidth="108.0" text="Serial Number" />
+                  <TableColumn fx:id="rate" prefWidth="94.0" text="Serial " />
+                  <TableColumn fx:id="duration" prefWidth="73.0" sortType="DESCENDING" sortable="false" text="Quantity" />
+                  <TableColumn fx:id="name" minWidth="0.0" prefWidth="235.0" text="Article" />
+                  <TableColumn fx:id="address" prefWidth="180.0" text="Fabric" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip graphicTextGap="10.0" opacity="0.6" text="Article Information" />
+               </tooltip>
+            </TableView>
+            <Button fx:id="addButton" layoutX="370.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#addPersonButton" text="Add New Article" textFill="#0d212e" visible="false" />
+            <Text fx:id="textFlowRate" layoutX="238.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Article Number" visible="false" />
+            <Text fx:id="textRate" layoutX="238.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serial Number" visible="false" />
+            <Text fx:id="textDuration" layoutX="238.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" visible="false" />
+            <Text fx:id="textName" layoutX="238.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Article Name" visible="false" />
+            <Text fx:id="textAddress" layoutX="240.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manufacturer" visible="false" />
+            <TextField fx:id="fieldFlowRate" layoutX="238.0" layoutY="208.0" prefHeight="25.0" prefWidth="237.0" style="-fx-background-radius: 10;" visible="false" AnchorPane.leftAnchor="238.0" />
+            <TextField fx:id="fieldRate" layoutX="238.0" layoutY="261.0" prefHeight="25.0" prefWidth="237.0" style="-fx-background-radius: 10;" visible="false" />
+            <TextField fx:id="fieldDuration" layoutX="238.0" layoutY="321.0" prefHeight="25.0" prefWidth="237.0" style="-fx-background-radius: 10;" visible="false" />
+            <TextField fx:id="fieldName" layoutX="238.0" layoutY="381.0" prefHeight="25.0" prefWidth="237.0" style="-fx-background-radius: 10;" visible="false" />
+            <TextField fx:id="fieldAddress" layoutX="238.0" layoutY="445.0" prefHeight="25.0" prefWidth="237.0" style="-fx-background-radius: 10;" visible="false" />
+            <Button fx:id="deletePerson" layoutX="566.0" layoutY="746.0" mnemonicParsing="false" onMouseClicked="#deletePerson" text="Delete Article" textFill="RED" visible="false" />
+            <Button fx:id="clearBtn" layoutX="238.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#clearButtonAction" text="Clear" visible="false" />
+            <Button fx:id="updateButton" layoutX="450.0" layoutY="746.0" mnemonicParsing="false" onMouseClicked="#updateAtricleAction" text="Update Article" textFill="#0e5996" visible="false" />
+            <Button fx:id="updtArtcl" layoutX="370.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#updtArtcl" text="Update" visible="false" />
+            <TextField fx:id="fieldId" layoutX="174.0" layoutY="129.0" style="rad: 10;" visible="false" />
+            <ImageView fx:id="imgOnHomeScreen" fitHeight="264.0" fitWidth="390.0" layoutX="188.0" layoutY="470.0" onMouseClicked="#addNewCustomer" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pills.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="textUpdate" fill="#25b4cd" layoutX="174.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Article" visible="false">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Text>
+            <Text fx:id="textWelcome" fill="#2295ab" layoutX="193.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crud ">
+               <font>
+                  <Font size="52.0" />
+               </font>
+            </Text>
+            <Text fx:id="textEntry" fill="#1b6180" layoutX="199.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRUD is relevant at the user interface level &#10;of most applications. The software allow the&#10;user to &#10;&#10;•Create or add new articles and customers&#10;•Read, retrieve, search, or view existing entries&#10;•Update or edit existing entries&#10;•Delete/deactivate/remove existing entries" textAlignment="JUSTIFY">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="textArticlesList" fill="#2c9bae" layoutX="255.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Article's List" visible="false">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Text>
+            <TableView fx:id="cView" editable="true" layoutX="4.0" layoutY="71.0" prefHeight="638.0" prefWidth="734.0" style="-fx-background-color: white;" visible="false">
+              <columns>
+                <TableColumn fx:id="custo_id" prefWidth="34.0" text="Id" />
+                <TableColumn fx:id="cName" prefWidth="314.0" text="Customer Name" />
+                  <TableColumn fx:id="cPib" minWidth="0.0" prefWidth="170.0" text="Customer Vat" />
+                  <TableColumn fx:id="cAddress" minWidth="0.0" prefWidth="214.0" text="Customer Address" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip contentDisplay="TOP" opacity="0.5" text="Edit Customer Information" />
+               </tooltip>
+            </TableView>
+            <Text fx:id="textCustomerList" fill="#2c9bae" layoutX="230.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer's List" visible="false">
+               <font>
+                  <Font name="Calibri" size="38.0" />
+               </font>
+            </Text>
+            <Text fx:id="textAddNewCustomer" fill="#25b4cd" layoutX="174.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Customer" visible="false">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Text>
+            <TextField fx:id="customerNameField" layoutX="238.0" layoutY="208.0" prefHeight="25.0" prefWidth="237.0" style="-fx-background-radius: 10;" visible="false" />
+            <Text fx:id="textCustomerName" layoutX="238.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer name" visible="false" />
+            <Text fx:id="textCustomerVat" layoutX="238.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Vat" visible="false" />
+            <Text fx:id="textCustomerAddress" layoutX="238.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Address" visible="false" />
+            <TextField fx:id="customerVatField" layoutX="238.0" layoutY="261.0" prefHeight="25.0" prefWidth="237.0" style="-fx-background-radius: 10;" visible="false" />
+            <TextField fx:id="customerAddressField" layoutX="238.0" layoutY="321.0" prefHeight="25.0" prefWidth="237.0" style="-fx-background-radius: 10;" visible="false" />
+            <Text fx:id="textCustomerGroup" layoutX="238.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer group (Optional)" visible="false" />
+            <TextField fx:id="customerGroupField" layoutX="238.0" layoutY="381.0" prefHeight="25.0" prefWidth="237.0" style="-fx-background-radius: 10;" visible="false" />
+            <Button fx:id="clearCustomerButton" layoutX="238.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#clearCustomerButton" text="Clear" visible="false" />
+            <Button fx:id="addNewCustomerButton" layoutX="355.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#addNewCustomerButton" text="Add New Customer" visible="false" />
+            <Button fx:id="deleteCustomerButton" layoutX="549.0" layoutY="746.0" mnemonicParsing="false" onMouseClicked="#deleteCustomer" text="Delete Customer" textFill="#f50505" visible="false" />
+            <Button fx:id="updateCustomerButton" layoutX="426.0" layoutY="746.0" mnemonicParsing="false" onMouseClicked="#updateCustomerAction" text="Update Customer" textFill="#0e5996" visible="false" />
+            <Button fx:id="updateCusto" layoutX="370.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#updateCusto" text="Update" visible="false" />
+            <Text fx:id="textLginPage" fill="#2c9bae" layoutX="255.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIGN IN" visible="false">
+               <font>
+                  <Font name="Calibri" size="38.0" />
+               </font>
+            </Text>
+            <TextField fx:id="passLogin" layoutX="200.0" layoutY="200.0" prefHeight="25.0" prefWidth="376.0" promptText="Password" style="-fx-background-radius: 6;" visible="false" />
+            <ComboBox fx:id="comboBoxLogin" layoutX="200.0" layoutY="140.0" prefHeight="25.0" prefWidth="376.0" visible="false" />
+            <Button fx:id="loginButton" layoutX="526.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#loginAction" text="Log in" visible="false" />
+            <Text fx:id="selectCusto" fill="#2295ab" layoutX="144.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="selectedCustoLabel" fill="#2295ab" layoutX="100.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hi," visible="false">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Button fx:id="chooseArticle" layoutX="546.0" layoutY="726.0" mnemonicParsing="false" onMouseClicked="#chooseArticleAction" text="Confirm" visible="false" />
+            <Button fx:id="buyButon" layoutX="426.0" layoutY="746.0" mnemonicParsing="false" onMouseClicked="#buyArticleAction" text="Buy now" visible="false" />
+            <Text fx:id="textAccount" layoutX="205.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account :" visible="false" />
+            <Text fx:id="textPassword" layoutX="205.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password : " visible="false" />
+            <Text fx:id="textSelectInfo" fill="#25b4cd" layoutX="174.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Information" visible="false">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Text>
+            <Text fx:id="selectCusto1" fill="#2295ab" layoutX="154.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Text>
+            <Text fx:id="textUpdateCustomer" fill="#25b4cd" layoutX="174.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update customer" visible="false">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text fill="WHITE" layoutX="57.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info" wrappingWidth="162.0">
+         <font>
+            <Font name="Calibri" size="82.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="104.0" fitWidth="102.0" layoutX="114.0" layoutY="584.0" onMouseClicked="#homeButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Logo5.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="77.0" fitWidth="69.0" layoutX="54.0" layoutY="199.0" onMouseClicked="#listButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/list.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="105.0" layoutX="135.0" layoutY="180.0" onMouseClicked="#addPerson" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/add.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="69.0" fitWidth="61.0" layoutX="58.0" layoutY="312.0" onMouseClicked="#listCusto" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/customer.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="69.0" fitWidth="76.0" layoutX="149.0" layoutY="310.0" onMouseClicked="#addNewCustomer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bf89df6b6c8c2819d43b6ba4124251fd.image.250x250.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="100.0" layoutY="759.0" onMouseClicked="#contactUs" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Us">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Separator layoutX="20.0" layoutY="700.0" prefWidth="290.0" />
+      <ImageView fitHeight="79.0" fitWidth="76.0" layoutX="62.0" layoutY="416.0" onMouseClicked="#loginPage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/shoping_cart2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
